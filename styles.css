@@ -193,7 +193,7 @@ a {
 .signs{
   width: 100%;
   display: flex;
-  background-color: var(--line);
+  background-color: var(--soft);
   border-radius: calc(var(--radius) + 8px);
 }
 .signs button{
@@ -212,6 +212,60 @@ a {
 .signs button:first-child{
   background-color: var(--ink);
   color: var(--paper);
+}
+.auth-forms{
+  width: 100%;
+  background-color: var(--soft);
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: calc(var(--radius) + 8px);
+}
+.member-auth h6{
+  margin: 0;
+  letter-spacing: 1.5px;
+  font-weight: lighter;
+  color: var(--muted-clay);
+}
+.member-auth label, .member-auth input, .member-auth button{
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+.member-auth form{
+  margin: 15px 0;
+}
+.member-auth label{
+  font-size: 12px;
+  color: var(--ink);
+  font-weight: 600;
+}
+.member-auth input, .member-auth button{
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 4px);
+}
+.member-auth input {  
+  color: var(--ink);
+  opacity: 1;
+  background-color: var(--paper);
+}
+.member-auth input::placeholder{
+  color: var(--muted-clay);
+}
+.member-auth input:focus {
+  outline: none;
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+.member-auth button{
+  margin: 20px 0;
+  background-color: var(--accent);
+  color: #fff;
+  font-weight: bolder;
+}
+#user-details p:last-child{
+  text-align: center;
+  font-size: 12px;
 }
 .footer {
   background: var(--ink);
