@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Workstations — TEVEN Workstation</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="workstation.css">
   </head>
   <body>
     <header class="header">
       <nav class="nav wrap">
-        <a class="brand" href="index.html"><span class="logo">T</span>TEVEN Workstation</a
+        <a class="brand" href="index.html"
+          ><span class="logo">T</span>TEVEN Workstation</a
         ><button class="menu" aria-label="Open menu" aria-expanded="false">
           ☰
         </button>
@@ -17,7 +19,7 @@
           <a href="index.html">Home</a>
           <a href="workstation.html">Workstation</a>
           <a href="about.html">About</a>
-          <a href="index.html#user-details" id="sign-btn">Sign In</a>
+          <a href="auth.html" id="sign-btn">Sign In</a>
         </div>
       </nav>
     </header>
@@ -37,7 +39,9 @@
             <li>8 hours of internet access</li>
             <li>Free lunch snack</li>
           </ul>
-          <a href="#" class="btn">Book Now</a>
+          <a href="booking.html?workspace=combo-space" class="btn book-btn">
+            Book Now
+          </a>
         </article>
         <article class="card">
           <img src="assets/rental-solo.jpg" alt="Solo desk" />
@@ -51,7 +55,9 @@
             <li>8 hours of internet access</li>
             <li>Free lunch snack</li>
           </ul>
-          <a href="#" class="btn">Book Now</a>
+          <a href="booking.html?workspace=combo-system" class="btn book-btn">
+            Book Now
+          </a>
         </article>
         <article class="card">
           <img src="assets/rental-executive.jpg" alt="Executive workstation" />
@@ -64,9 +70,13 @@
             <li>Easily connect to WiFi</li>
             <li>10 hours of internet access</li>
             <li>Free lunch snack</li>
-          </ul>
-          <a href="#" class="btn">Book Now</a>
-        </article>
+          </ul><a
+  href="booking.html?workspace=solo-desk"
+  class="btn book-btn"
+>
+  Book Now
+</a>
+</article>
         <article class="card">
           <img src="assets/rental-pair-system.jpg" alt="Pair with system" />
           <h2>Executive Work Office</h2>
@@ -80,7 +90,12 @@
             <li>12 hours of internet access</li>
             <li>Free lunch snack</li>
           </ul>
-          <a href="#" class="btn">Book Now</a>
+          <a
+  href="booking.html?workspace=executive-office"
+  class="btn book-btn"
+>
+  Book Now
+</a>
         </article>
       </div>
     </main>

@@ -734,8 +734,7 @@ a {
   color: var(--ink);
 }
 
-.signs button.active,
-.signs button:first-child {
+.signs button.active {
   background: var(--ink);
   color: var(--paper);
 }
@@ -775,7 +774,7 @@ a {
 
 /* Labels */
 
-.member-auth label {
+.member-auth label, .user-auth label {
   display: block;
 
   margin: 15px 0 7px;
@@ -788,38 +787,36 @@ a {
 
 /* Inputs */
 
-.member-auth input {
+.member-auth input, .user-auth input, .user-auth select {
   display: block;
-
   width: 100%;
-
   padding: 14px 15px;
-
   background: var(--paper);
-
   color: var(--ink);
-
   border: 1px solid var(--line);
-
   border-radius: calc(var(--radius) + 4px);
-
   outline: none;
-
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease;
 }
 
-.member-auth input::placeholder {
+.member-auth input::placeholder, .user-auth input::placeholder {
   color: var(--muted-clay);
 }
 
 /* Input focus */
 
-.member-auth input:focus {
+.member-auth input:focus, .user-auth input:focus {
   border-color: var(--accent);
 
   box-shadow: 0 0 0 3px rgba(217, 87, 53, 0.15);
+}
+
+.user-auth form > div{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 
 /* Submit */
@@ -866,6 +863,38 @@ a {
   font-size: 12px;
 
   text-align: center;
+}
+
+
+.legal {
+  max-width: 760px;
+}
+.legal section {
+  margin: 32px 0;
+}
+.legal h2 {
+  font:
+    600 26px Fraunces,
+    serif;
+}
+.legal p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.legal li{
+    list-style-type: none;
+}
+
+.data-collected li{
+    list-style-type: upper-alpha;
+}
+.menu {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 26px;
+  color: var(--ink);
 }
 
 .footer {

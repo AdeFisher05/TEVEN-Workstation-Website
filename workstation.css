@@ -1,0 +1,57 @@
+
+.hours {
+  border-left: 3px solid var(--accent);
+  padding-left: 16px;
+  margin-top: 28px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.page {
+  padding: 72px 0;
+}
+.intro {
+  max-width: 700px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.7;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 40px;
+}
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  padding: 18px;
+  border-radius: 8px;
+}
+.card img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.card h2 {
+  font:
+    600 22px Fraunces,
+    serif;
+}
+.price {
+  font:
+    600 29px Fraunces,
+    serif;
+}
+.card ul {
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 45px;
+}

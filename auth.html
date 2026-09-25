@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEVEN Workstation | Sign in</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav wrap">
+        <a class="brand" href="index.html">
+          <span class="logo">T</span>
+          <span>TEVEN Workstation</span>
+        </a>
+        <button
+          class="menu"
+          aria-label="Open menu"
+          aria-expanded="false"
+          type="button"
+        >
+          ☰
+        </button>
+        <div class="links">
+          <a href="index.html">Home</a>
+          <a href="workstation.html">Workstation</a>
+          <a href="about.html">About</a>
+          <a href="auth.html" id="sign-btn">Sign In</a>
+        </div>
+      </nav>
+    </header>
+    <section id="user-details">
+      <div class="auth-intro">
+        <p class="brand auth-brand">
+          <span class="logo">T</span>
+          <span>
+            TEVEN
+            <span class="brand-transform"> Workstation </span>
+          </span>
+        </p>
+        <h2>A desk that just works when the grid doesn't.</h2>
+        <p class="info">
+          Steady power, fast internet and a ready computer every day. Sign in to
+          book your place.
+        </p>
+      </div>
+      <div class="signs">
+        <button type="button" class="active" id="sign-in">Sign In</button>
+        <button type="button" id="register">Register</button>
+      </div>
+      <section class="auth-forms">
+        <div class="member-auth">
+          <p class="form-label">MEMBER SIGN IN</p>
+          <form action="" method="post">
+            <label for="email"> Email </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              autocomplete="email"
+              placeholder="you@example.com"
+            />
+            <label for="password"> Password </label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              required
+              autocomplete="current-password"
+              placeholder="Your password"
+            />
+            <button type="submit" class="auth-submit">Sign in</button>
+          </form>
+        </div>
+        <div class="user-auth" style="display: none;">
+          <p class="form-label">NEW ACCOUNT . STEP 1 OF 3</p>
+          <form action="">
+            <div>
+              <div>
+                <label for="first-name">First name</label>
+                <input type="text" name="first-name" id="first-name" required placeholder="Chidera">
+              </div>
+              <div>
+                <label for="other-name">Other name</label>
+                <input type="text" name="other-name" id="other-name" required placeholder="Adaora">
+              </div>
+              <div>
+                <label for="last-name">Last name</label>
+                <input type="text" name="last-name" id="last-name" required placeholder="Okafor">
+              </div>
+              <div>
+                <label for="mobile-phone">Mobile phone</label>
+                <input type="tel" name="mobile-phone" id="mobile-phone" required placeholder="0803 111 2233">
+              </div>
+              <div>
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender">
+                  <option value="select" selected disabled>Select</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+              <div>
+                <label for="nin">NIN</label>
+                <input type="text" name="nin" id="nin" required placeholder="11 digits">
+              </div>
+            </div>
+            <button type="submit" class="auth-submit">Continue to address</button>
+          </form>
+        </div>
+      </section>
+      <p class="privacy-note">
+        Your data stays private. Verified members only.
+      </p>
+    </section>
+    <footer class="footer">
+      <div class="footer-inner wrap">
+        <div class="footer-brand">
+          <strong> TEVEN Workstation </strong>
+          <span> Power on. Get to work. </span>
+        </div>
+        <div class="footer-links">
+          <a href="terms.html"> Terms &amp; Conditions </a>
+          <a href="privacy.html"> Privacy Policy </a>
+        </div>
+      </div>
+    </footer>
+    <script src="auth.js"></script>
+  </body>
+</html>
