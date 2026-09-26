@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TEVEN Workstation | Sign in</title>
+    <title>Sign in - TEVEN Workstation</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -127,11 +127,11 @@
                   </select>
                 </div>
                 <div>
-                  <label for="nin">NIN</label>
+                  <label for="nin-digits">NIN</label>
                   <input
                     type="text"
-                    name="nin"
-                    id="nin"
+                    name="nin-digits"
+                    id="nin-digits"
                     required
                     placeholder="11 digits"
                   />
@@ -148,51 +148,98 @@
           <div id="second-form" style="display: none">
             <p class="form-label">NEW ACCOUNT . STEP 2 OF 3</p>
             <form action="">
-            <div class="second">
-              <div>
-                <label for="address">Address</label>
-                <input type="text" name="address" id="address" required placeholder="12 Admirality Way">
+              <div class="second">
+                <div>
+                  <label for="address">Address</label>
+                  <input
+                    type="text"
+                    name="address"
+                    id="address"
+                    required
+                    placeholder="12 Admiralty Way"
+                  />
+                </div>
+                <div>
+                  <label for="city">City</label>
+                  <input
+                    type="text"
+                    name="city"
+                    id="city"
+                    required
+                    placeholder="Lekki"
+                  />
+                </div>
+                <div>
+                  <label for="state">State</label>
+                  <input
+                    type="text"
+                    name="state"
+                    id="state"
+                    required
+                    placeholder="Lagos"
+                  />
+                </div>
+                <div>
+                  <label for="local-gov">Local Government</label>
+                  <input
+                    type="text"
+                    name="local-gov"
+                    id="local-gov"
+                    required
+                    placeholder="Eti-Osa"
+                  />
+                </div>
+                <div class="file-input">
+                  <label class="file-input-label">
+                    <span class="eyebrow">SELFIE</span>
+                    <br />
+                    <span id="selfie-label">Upload photo</span>
+
+                    <input
+                      type="file"
+                      name="selfie"
+                      id="selfie"
+                      accept="image/*"
+                      required
+                    />
+                  </label>
+                </div>
+
+                <div class="file-input">
+                  <label class="file-input-label">
+                    <span class="eyebrow">UPLOAD NIN</span>
+                    <br />
+                    <span id="nin-label">Scan / photo</span>
+
+                    <input
+                      type="file"
+                      name="nin"
+                      id="nin"
+                      accept="image/*"
+                      required
+                    />
+                  </label>
+                </div>
               </div>
-              <div>
-                <label for="city">City</label>
-                <input type="text" name="city" id="city" required placeholder="Lekki">
-              </div>
-              <div>
-                <label for="state">State</label>
-                <input type="text" name="state" id="state" required placeholder="Lagos">
-              </div>
-              <div>
-                <label for="local-gov">Local Government</label>
-                <input type="text" name="local-gov" id="local-gov" required placeholder="Eti-Osa">
-              </div>
-              <div class="file-input">
-                <label class="file-input-label" for="selfie"><span class="eyebrow">SELFIE</span> <br>Upload photo</label>
-                <input style="display: none;" type="file" name="selfie" id="selfie" onchange="updateLabel()" required>
-              </div>
-              <div class="file-input">
-                <label class="file-input-label" for="nin"><span class="eyebrow">UPLOAD NIN</span> <br>Scan / photo</label>
-                <input style="display: none;" type="file" name="nin" id="nin" onchange="updateLabel()" required>
-              </div>
-            </div>
-            <div class="progress">
+              <div class="progress">
                 <div class="progress-fill" data-width="67"></div>
               </div>
               <div class="btns">
-                <button id="back">Back</button>
-              <button type="submit" class="auth-submit">
-                Continue to security
-              </button>
+                <button type="button" id="back">Back</button>
+                <button type="submit" class="auth-submit">
+                  Continue to security
+                </button>
               </div>
             </form>
           </div>
           <div style="display: none">
             <p class="form-label">NEW ACCOUNT . STEP 3 OF 3</p>
             <form action="">
-            <div class="third">
-              <div>
-                <label for=""></label>
+              <div class="third">
+                <div>
+                  <label for=""></label>
+                </div>
               </div>
-            </div>
             </form>
           </div>
         </div>

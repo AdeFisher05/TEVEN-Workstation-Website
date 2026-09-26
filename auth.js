@@ -46,12 +46,24 @@ back.addEventListener("click", () => {
   firstForm.style.display = "block";
 });
 
-function updateLabel() {
-  var input = document.getElementById("selfie");
-  var label = document.querySelector(".file-input-label");
-  if (input.files.length > 0) {
-    label.textContent = input.files[0].name;
+const selfieInput = document.getElementById("selfie");
+const ninInput = document.getElementById("nin");
+
+const selfieLabel = document.getElementById("selfie-label");
+const ninLabel = document.getElementById("nin-label");
+
+selfieInput.addEventListener("change", () => {
+  if (selfieInput.files.length > 0) {
+    selfieLabel.textContent = selfieInput.files[0].name;
   } else {
-    label.textContent = "Choose a file...";
+    selfieLabel.textContent = "Upload photo";
   }
-}
+});
+
+ninInput.addEventListener("change", () => {
+  if (ninInput.files.length > 0) {
+    ninLabel.textContent = ninInput.files[0].name;
+  } else {
+    ninLabel.textContent = "Scan / photo";
+  }
+});
