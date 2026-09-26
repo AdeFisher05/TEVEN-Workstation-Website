@@ -165,14 +165,19 @@
                 <label for="local-gov">Local Government</label>
                 <input type="text" name="local-gov" id="local-gov" required placeholder="Eti-Osa">
               </div>
-              <div>
-                <input type="file" name="selfie" id="selfie" required>
+              <div class="file-input">
+                <label class="file-input-label" for="selfie"><span class="eyebrow">SELFIE</span> <br>Upload photo</label>
+                <input style="display: none;" type="file" name="selfie" id="selfie" onchange="updateLabel()" required>
+              </div>
+              <div class="file-input">
+                <label class="file-input-label" for="nin"><span class="eyebrow">UPLOAD NIN</span> <br>Scan / photo</label>
+                <input style="display: none;" type="file" name="nin" id="nin" onchange="updateLabel()" required>
               </div>
             </div>
             <div class="progress">
                 <div class="progress-fill" data-width="67"></div>
               </div>
-              <div>
+              <div class="btns">
                 <button id="back">Back</button>
               <button type="submit" class="auth-submit">
                 Continue to security
