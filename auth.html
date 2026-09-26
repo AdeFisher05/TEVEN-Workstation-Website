@@ -226,19 +226,37 @@
               </div>
               <div class="btns">
                 <button type="button" id="back">Back</button>
-                <button type="submit" class="auth-submit">
+                <button type="submit" id="second-btn" class="auth-submit">
                   Continue to security
                 </button>
               </div>
             </form>
           </div>
-          <div style="display: none">
+          <div id="third-form" style="display: none">
             <p class="form-label">NEW ACCOUNT . STEP 3 OF 3</p>
             <form action="">
               <div class="third">
                 <div>
-                  <label for=""></label>
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" required placeholder="you@example.com">
                 </div>
+                <div>
+                  <label for="password">Password</label>
+                  <input type="password" name="password" id="password" required placeholder="At least 8 characters">
+                </div>
+                <div>
+                  <label for="confirm-password">Re-enter your password</label>
+                  <input type="password" name="confirm-password" id="confirm-password" required placeholder="Repeat your password">
+                </div>
+              </div>
+              <div class="progress">
+                <div class="progress-fill" data-width="100"></div>
+              </div>
+              <div class="btns">
+                <button type="button" id="back-two">Back</button>
+                <button type="submit" id="third-btn" class="auth-submit">
+                  Create account
+                </button>
               </div>
             </form>
           </div>

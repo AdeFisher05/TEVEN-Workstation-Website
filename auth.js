@@ -33,18 +33,34 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const firstBtn = document.getElementById("first-btn");
+const secondBtn = document.getElementById("second-btn");
 const firstForm = document.getElementById("first-form");
 const secondForm = document.getElementById("second-form");
+const thirdForm = document.getElementById("third-form");
 const back = document.getElementById("back");
+const backTwo =  document.getElementById("back-two");
 firstBtn.addEventListener("click", (e) => {
   e.preventDefault();
   firstForm.style.display = "none";
+  thirdForm.style.display = "none";
   secondForm.style.display = "block";
+});
+secondBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  firstForm.style.display = "none";
+  secondForm.style.display = "none";
+  thirdForm.style.display = "block";
 });
 back.addEventListener("click", () => {
   secondForm.style.display = "none";
+  thirdForm.style.display = "none"
   firstForm.style.display = "block";
 });
+backTwo.addEventListener("click", () => {
+  firstForm.style.display = "none";
+  thirdForm.style.display = "none";
+  secondForm.style.display = "block";
+})
 
 const selfieInput = document.getElementById("selfie");
 const ninInput = document.getElementById("nin");

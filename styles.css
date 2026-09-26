@@ -652,7 +652,7 @@ a {
     box-shadow 0.2s ease;
 }
 
-#back{
+#back, #back-two{
   padding: 14px 15px;
   border: 1px solid var(--line);
   border-radius: calc(var(--radius) + 4px);
