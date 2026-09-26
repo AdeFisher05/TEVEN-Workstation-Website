@@ -13,4 +13,35 @@ signIn.addEventListener("click", () => {
     signIn.classList.add("active");
     userAuth.style.display = "none";
     memberAuth.style.display = "block";
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const progressBars = document.querySelectorAll(".progress-fill");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.width = entry.target.dataset.width + "%";
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+    },
+  );
+
+  progressBars.forEach((bar) => observer.observe(bar));
+});
+
+const firstBtn = document.getElementById("first-btn");
+const firstForm = document.getElementById("first-form");
+const secondForm = document.getElementById("second-form");
+const back = document.getElementById("back");
+firstBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  firstForm.style.display = "none";
+  secondForm.style.display = "block";
+});
+back.addEventListener("click", () => {
+  secondForm.style.display = "none";
+  firstForm.style.display = "block";
 })

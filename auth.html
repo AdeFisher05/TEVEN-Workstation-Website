@@ -73,41 +73,123 @@
             <button type="submit" class="auth-submit">Sign in</button>
           </form>
         </div>
-        <div class="user-auth" style="display: none;">
-          <p class="form-label">NEW ACCOUNT . STEP 1 OF 3</p>
-          <form action="">
-            <div>
+        <div class="user-auth" style="display: none">
+          <div id="first-form">
+            <p class="form-label">NEW ACCOUNT . STEP 1 OF 3</p>
+            <form action="">
+              <div class="first">
+                <div>
+                  <label for="first-name">First name</label>
+                  <input
+                    type="text"
+                    name="first-name"
+                    id="first-name"
+                    required
+                    placeholder="Chidera"
+                  />
+                </div>
+                <div>
+                  <label for="other-name">Other name</label>
+                  <input
+                    type="text"
+                    name="other-name"
+                    id="other-name"
+                    required
+                    placeholder="Adaora"
+                  />
+                </div>
+                <div>
+                  <label for="last-name">Last name</label>
+                  <input
+                    type="text"
+                    name="last-name"
+                    id="last-name"
+                    required
+                    placeholder="Okafor"
+                  />
+                </div>
+                <div>
+                  <label for="mobile-phone">Mobile phone</label>
+                  <input
+                    type="tel"
+                    name="mobile-phone"
+                    id="mobile-phone"
+                    required
+                    placeholder="0803 111 2233"
+                  />
+                </div>
+                <div>
+                  <label for="gender">Gender</label>
+                  <select name="gender" id="gender">
+                    <option value="select" selected disabled>Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="nin">NIN</label>
+                  <input
+                    type="text"
+                    name="nin"
+                    id="nin"
+                    required
+                    placeholder="11 digits"
+                  />
+                </div>
+              </div>
+              <div class="progress">
+                <div class="progress-fill" data-width="33"></div>
+              </div>
+              <button type="submit" id="first-btn" class="auth-submit">
+                Continue to address
+              </button>
+            </form>
+          </div>
+          <div id="second-form" style="display: none">
+            <p class="form-label">NEW ACCOUNT . STEP 2 OF 3</p>
+            <form action="">
+            <div class="second">
               <div>
-                <label for="first-name">First name</label>
-                <input type="text" name="first-name" id="first-name" required placeholder="Chidera">
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address" required placeholder="12 Admirality Way">
               </div>
               <div>
-                <label for="other-name">Other name</label>
-                <input type="text" name="other-name" id="other-name" required placeholder="Adaora">
+                <label for="city">City</label>
+                <input type="text" name="city" id="city" required placeholder="Lekki">
               </div>
               <div>
-                <label for="last-name">Last name</label>
-                <input type="text" name="last-name" id="last-name" required placeholder="Okafor">
+                <label for="state">State</label>
+                <input type="text" name="state" id="state" required placeholder="Lagos">
               </div>
               <div>
-                <label for="mobile-phone">Mobile phone</label>
-                <input type="tel" name="mobile-phone" id="mobile-phone" required placeholder="0803 111 2233">
+                <label for="local-gov">Local Government</label>
+                <input type="text" name="local-gov" id="local-gov" required placeholder="Eti-Osa">
               </div>
               <div>
-                <label for="gender">Gender</label>
-                <select name="gender" id="gender">
-                  <option value="select" selected disabled>Select</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                </select>
-              </div>
-              <div>
-                <label for="nin">NIN</label>
-                <input type="text" name="nin" id="nin" required placeholder="11 digits">
+                <input type="file" name="selfie" id="selfie" required>
               </div>
             </div>
-            <button type="submit" class="auth-submit">Continue to address</button>
-          </form>
+            <div class="progress">
+                <div class="progress-fill" data-width="67"></div>
+              </div>
+              <div>
+                <button id="back">Back</button>
+              <button type="submit" class="auth-submit">
+                Continue to security
+              </button>
+              </div>
+            </form>
+          </div>
+          <div style="display: none">
+            <p class="form-label">NEW ACCOUNT . STEP 3 OF 3</p>
+            <form action="">
+            <div class="third">
+              <div>
+                <label for=""></label>
+              </div>
+            </div>
+            </form>
+          </div>
         </div>
       </section>
       <p class="privacy-note">
