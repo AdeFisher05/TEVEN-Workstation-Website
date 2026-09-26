@@ -2,65 +2,87 @@ const register = document.getElementById("register");
 const signIn = document.getElementById("sign-in");
 const memberAuth = document.querySelector(".member-auth");
 const userAuth = document.querySelector(".user-auth");
+
+// SIGN IN / REGISTER TOGGLE
+
 register.addEventListener("click", () => {
   signIn.classList.remove("active");
   register.classList.add("active");
+
   memberAuth.style.display = "none";
   userAuth.style.display = "block";
 });
+
 signIn.addEventListener("click", () => {
   register.classList.remove("active");
   signIn.classList.add("active");
+
   userAuth.style.display = "none";
   memberAuth.style.display = "block";
 });
-document.addEventListener("DOMContentLoaded", () => {
-  const progressBars = document.querySelectorAll(".progress-fill");
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.style.width = entry.target.dataset.width + "%";
-        }
-      });
-    },
-    {
-      threshold: 0.3,
-    },
-  );
+// REGISTRATION STEPS
 
-  progressBars.forEach((bar) => observer.observe(bar));
-});
-
-const firstBtn = document.getElementById("first-btn");
-const secondBtn = document.getElementById("second-btn");
 const firstForm = document.getElementById("first-form");
 const secondForm = document.getElementById("second-form");
 const thirdForm = document.getElementById("third-form");
+
+const firstRegistrationForm = firstForm.querySelector("form");
+const secondRegistrationForm = secondForm.querySelector("form");
+const thirdRegistrationForm = thirdForm.querySelector("form");
+
 const back = document.getElementById("back");
-const backTwo =  document.getElementById("back-two");
-firstBtn.addEventListener("click", (e) => {
+const backTwo = document.getElementById("back-two");
+
+// Step 1 → Step 2
+firstRegistrationForm.addEventListener("submit", (e) => {
   e.preventDefault();
+
   firstForm.style.display = "none";
-  thirdForm.style.display = "none";
   secondForm.style.display = "block";
+  thirdForm.style.display = "none";
+
+  updateProgress(67);
 });
-secondBtn.addEventListener("click", (e) => {
+
+// Step 2 → Step 3
+secondRegistrationForm.addEventListener("submit", (e) => {
   e.preventDefault();
+
   firstForm.style.display = "none";
   secondForm.style.display = "none";
   thirdForm.style.display = "block";
+
+  updateProgress(100);
 });
+
+// Step 2 → Step 1
 back.addEventListener("click", () => {
   secondForm.style.display = "none";
-  thirdForm.style.display = "none"
+  thirdForm.style.display = "none";
   firstForm.style.display = "block";
+  updateProgress(33);
 });
+
+// Step 3 → Step 2
 backTwo.addEventListener("click", () => {
   firstForm.style.display = "none";
   thirdForm.style.display = "none";
   secondForm.style.display = "block";
-})
+  updateProgress(67);
+});
+
+// PROGRESS BAR
+
+function updateProgress(width) {
+  const progressBars = document.querySelectorAll(".progress-fill");
+  progressBars.forEach((bar) => {
+    bar.style.width = `${width}%`;
+  });
+}
+document.addEventListener("DOMContentLoaded", () => {
+  updateProgress(33);
+});
+// FILE INPUTS
 
 const selfieInput = document.getElementById("selfie");
 const ninInput = document.getElementById("nin");
@@ -82,4 +104,25 @@ ninInput.addEventListener("change", () => {
   } else {
     ninLabel.textContent = "Scan / photo";
   }
+});
+
+// PASSWORD VALIDATION
+
+const registerPassword = document.getElementById("register-password");
+const confirmPassword = document.getElementById("confirm-password");
+
+thirdRegistrationForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (registerPassword.value.length < 8) {
+    alert("Password must be at least 8 characters long.");
+    registerPassword.focus();
+    return;
+  }
+  if (registerPassword.value !== confirmPassword.value) {
+    alert("Passwords do not match.");
+    confirmPassword.focus();
+    return;
+  }
+  // Account creation will be connected here later.
+  alert("All registration details are valid!");
 });

@@ -237,16 +237,38 @@
             <form action="">
               <div class="third">
                 <div>
-                  <label for="email">Email</label>
-                  <input type="email" name="email" id="email" required placeholder="you@example.com">
+                  <label for="register-email">Email</label>
+                  <input
+                    type="email"
+                    name="register-email"
+                    id="register-email"
+                    required
+                    autocomplete="email"
+                    placeholder="you@example.com"
+                  />
                 </div>
                 <div>
-                  <label for="password">Password</label>
-                  <input type="password" name="password" id="password" required placeholder="At least 8 characters">
+                  <label for="register-password">Password</label>
+                  <input
+                    type="password"
+                    name="register-password"
+                    id="register-password"
+                    required
+                    autocomplete="new-password"
+                    minlength="8"
+                    placeholder="At least 8 characters"
+                  />
                 </div>
                 <div>
                   <label for="confirm-password">Re-enter your password</label>
-                  <input type="password" name="confirm-password" id="confirm-password" required placeholder="Repeat your password">
+                  <input
+                    type="password"
+                    name="confirm-password"
+                    id="confirm-password"
+                    required
+                    autocomplete="new-password"
+                    placeholder="Repeat your password"
+                  />
                 </div>
               </div>
               <div class="progress">
